@@ -20,9 +20,9 @@ export default {
           <div class="col ">
             <nav>
               <ul class="main-menu">
-                <li><a href="#">uomo</a></li>
                 <li><a href="#">donna</a></li>
-                <li><a href="#">bambino</a></li>
+                <li><a href="#">uomo</a></li>
+                <li><a href="#">bambini</a></li>
               </ul>
             </nav>
           </div>

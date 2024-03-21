@@ -1,12 +1,21 @@
 <script >
+import Header from './Header.vue';
+import Main from './Main.vue';
+import Footer from './Footer.vue';
 
-export default {
-  data(){
-    return {
+  export default {
+    components: {
+      Header,
+      Main,
+      Footer
+    };
 
+    data(){
+      return {
+
+      }
     }
   }
-}
 
 </script>
 
@@ -23,6 +32,8 @@ export default {
 
 
 
-<style scoped>
+<style lang="scss" scoped>
 
+  @use './assets/scss/main.scss';
+  
 </style>

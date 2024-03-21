@@ -3,6 +3,7 @@
 export default {
   data(){
     return {
+      
 
     }
   }
@@ -63,7 +64,7 @@ export default {
 
   .container-header {
     width: 98%;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     height: 100%;
   }

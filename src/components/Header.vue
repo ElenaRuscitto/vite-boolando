@@ -3,7 +3,23 @@
 export default {
   data(){
     return {
+        mainMenu: [
+          {
+            tipo: 'donna',
+            link: '#'
+          },
+          {
+            tipo: 'uomo',
+            link: '#'
+          },
+          {
+            tipo: 'bambini',
+            link: '#'
+          },
+        ]
+
       
+
 
     }
   }
@@ -21,9 +37,8 @@ export default {
           <div class="col ">
             <nav>
               <ul class="main-menu">
-                <li><a href="#">donna</a></li>
-                <li><a href="#">uomo</a></li>
-                <li><a href="#">bambini</a></li>
+                <li v-for="(element, index) in mainMenu" :key="index"><a :href="element.link">{{ element.tipo }}</a></li>
+            
               </ul>
             </nav>
           </div>

@@ -1,8 +1,13 @@
 <script>
   export default {
-    // props: {
-    //   ProductCard
-    // }
+    props: {
+      // ProductCard
+    },
+    data (){
+      return {
+        // products
+      }
+    }
   }
 </script>
 
@@ -11,9 +16,9 @@
 <template>
 
     <div class="product">
-card
-    <!-- <img id="immagine" src="./img/1.webp" alt="1.webp">
-    <img id="immagine-hover" src="./img/1b.webp" alt="1b.webp">
+
+      <img id="immagine" src="./img/1.webp" alt="1.webp">
+      <img id="immagine-hover" src="./img/1b.webp" alt="1b.webp">
       <div class="heart"><span>&hearts;</span></div>
 
       <div class="discount"><strong>-50%</strong></div>
@@ -24,7 +29,7 @@ card
         <h4>RELAXED FIT TEE UNISEX</h4>
         <span class="costo" ><strong>14,99 &euro;</strong></span>
         <span class="ex-costo" >29,99 &euro;</span>
-      </div> -->
+      </div>
       
 
   </div>

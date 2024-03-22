@@ -1,5 +1,7 @@
 <script>
 import ProductCard from './partials/ProductCard.vue';
+import product from '../assets/data/db.json';
+
   export default {
 
     components: {

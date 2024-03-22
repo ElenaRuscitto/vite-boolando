@@ -101,12 +101,12 @@ export default {
     height: 80px;
     background-color: $bgc-header;
     box-shadow: 0 1px 3px rgba(128, 128, 128, 0.896);
-    line-height: 80px;
+    top: 0;
   }
 
   .container-header {
     width: 98%;
-    max-width: 1200px;
+    max-width: 1380px;
     margin: 0 auto;
     height: 100%;
   }

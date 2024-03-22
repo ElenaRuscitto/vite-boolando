@@ -34,18 +34,22 @@
       >
       <div class="heart"><span>&hearts;</span></div>
 
-      <div class="discount"
-      v-for="disc in product.badges"
+      <!-- sconto -->
+      <div 
+      v-for="(discount, indice) in product.badges"
       :key="indice"
+      :class="discount.type"
       >
-      <strong>-50%</strong></div>
-      <div class="eco"><strong>Sostenibilità</strong></div>
+        <strong>{{discount.value}}</strong>
+      </div>
+
+      
 
       <div class="testo">
-        <figcaption>Levi's</figcaption>
-        <h4>RELAXED FIT TEE UNISEX</h4>
-        <span class="costo" ><strong>14,99 &euro;</strong></span>
-        <span class="ex-costo" >29,99 &euro;</span>
+        <figcaption>{{product.brand}}</figcaption>
+        <h4>{{product.name}}</h4>
+        <span class="costo" ><strong>{{product.price}} &euro;</strong></span>
+        <!-- <span class="ex-costo" >29,99 &euro;</span> -->
       </div>
       
 
@@ -63,87 +67,78 @@
   height: 450px;
   margin: 150px 5px;
   position: relative;
-}
 
-#immagine{
-  width: 440px;
-  height: 640px;
+  .heart {
+    font-size: 2rem;
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    background-color: $c-whitw;
+    padding: 5px 8px;
+  }
+
   
+  .discount  {
+    position: absolute;
+    bottom: -160px;
+    left: 0px;
+    background-color: $bgc-sconto;
+    padding: 4px 8px;
+    font-size: 10px;
+    color: $c-whitw;
+  }
+  
+  #immagine{
+    width: 440px;
+    height: 640px;
+    
+      &:hover{
+        opacity: 0;
+      }
+  }
+
+  #immagine-hover{
+    width: 440px;
+    height: 640px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 
-
-#immagine-hover{
-  width: 440px;
-  height: 640px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-
-
-#immagine:hover{
-  opacity: 0;
-}
-
-
-.product .heart {
-  font-size: 2rem;
-  position: absolute;
-  top: 5px;
-  right: 0px;
-  background-color: white;
-  padding: 5px 5px;
-}
-
-.product .discount  {
-  position: absolute;
-  bottom: -160px;
-  left: 0px;
-  background-color: red;
-  padding: 4px 8px;
-  font-size: 10px;
-  color: white;
-}
-
-.eco  {
+.tag  {
   position: absolute;
   bottom: -160px;
   left: 45px;
-  background-color: green;
-  padding: 2px 8px;
+  background-color: $bgc-eco;
+  padding: 3px 8px;
   font-size: 12px;
-  color: white;
+  color: $c-whitw;
 }
 
-.eco-p {
+.tag-p {
   position: absolute;
   bottom: -160px;
   left: 0px;
-  background-color: green;
+  background-color: $bgc-eco;
   padding: 2px 8px;
   font-size: 12px;
-  color: white;
+  color: $c-whitw;
 }
 
 .testo{
   line-height: 1.1;
   font-size: 14px;
-}
-
-.testo figcaption{
-  color: rgb(157, 134, 96);
-
+    figcaption{
+    color: $c-black;
+    }
 }
 
 .costo{
-  color: red;
+  color: $bgc-sconto;
   text-decoration: bold;
 }
 
-.ex-costo{
-  text-decoration: line-through;
-}
 
 </style>

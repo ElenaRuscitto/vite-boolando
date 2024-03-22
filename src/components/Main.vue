@@ -42,9 +42,7 @@ import productsList from '../assets/data/db.json';
 @use '../assets/scss/partials/general';
 @use '../assets/scss/partials/variables' as *;
 
-.container {
-  padding-top: 100px;
-}
+
 
 .container {
 	display: flex;

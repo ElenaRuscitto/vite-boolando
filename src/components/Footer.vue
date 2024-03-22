@@ -59,8 +59,8 @@
 
   .container-footer{
     color: $c-whitw;
-    max-width: 1200px;
-    margin: 300px auto; //da levare 300px
+    max-width: 1380px;
+    margin: 150px auto; //da levare 300px
   }
 
   .box{

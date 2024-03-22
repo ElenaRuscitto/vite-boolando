@@ -1,11 +1,18 @@
 <script>
+
   export default {
     props: {
-      // ProductCard
+      product: Object
     },
     data (){
       return {
-        // products
+        
+      }
+    },
+
+    methods: {
+      getImage(img){
+        return new URL (`../../assets/img/${img}`, import.meta.url).href
       }
     }
   }
@@ -17,11 +24,21 @@
 
     <div class="product">
 
-      <img id="immagine" src="./img/1.webp" alt="1.webp">
-      <img id="immagine-hover" src="./img/1b.webp" alt="1b.webp">
+      <img id="immagine" 
+      :src="getImage(product.frontImage)" 
+      :alt="product.frontImage"
+      >
+      <img id="immagine-hover" 
+      :src="getImage(product.backImage)" 
+      :alt="product.backImage"
+      >
       <div class="heart"><span>&hearts;</span></div>
 
-      <div class="discount"><strong>-50%</strong></div>
+      <div class="discount"
+      v-for="disc in product.badges"
+      :key="indice"
+      >
+      <strong>-50%</strong></div>
       <div class="eco"><strong>Sostenibilità</strong></div>
 
       <div class="testo">
